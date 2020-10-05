@@ -18,6 +18,7 @@ namespace nombremagique.Views
         public GamePage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             nombreMagique = new Random().Next(NB_MAGIQUE_MIN, NB_MAGIQUE_MAX);
             minMaxLabel.Text = "entre " + NB_MAGIQUE_MIN + " et " + NB_MAGIQUE_MAX;
         }
@@ -56,8 +57,17 @@ namespace nombremagique.Views
             }
             if (nombreUtilisateur == nombreMagique)
             {
-                DisplayAlert("Gagné", "Vous avez trouvé le nombre magique", "ok");
+#pragma warning disable CS4014
+                WinAction();
+#pragma warning restore CS4014
+                return;
             }
+        }
+
+        private async Task WinAction()
+        {
+            await DisplayAlert("Gagné", "Vous avez trouvé le nombre magique", "ok");
+            await this.Navigation.PopAsync();
         }
     }
 }

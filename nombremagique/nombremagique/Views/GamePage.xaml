@@ -5,18 +5,23 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Devinez le" 
+                   TextColor="{StaticResource titleColor}"
                    Margin="0,50,0,0"
                    HorizontalOptions="Center"
                    FontSize="30" />
             <Label Text="Nombre magique"
+                   TextColor="{StaticResource titleColor}"
                    HorizontalOptions="Center"
                    FontSize="30"/>
             <Label Text="Entre x et x"
+                   TextColor="{StaticResource titleColor}"
                    x:Name="minMaxLabel"
                    HorizontalOptions="Center"
                    FontAttributes="Italic"
                    FontSize="20"/>
             <Entry x:Name="numberEntry"
+                   TextColor="white"
+                   PlaceholderColor="white"
                    Placeholder="?"
                    Keyboard="Numeric"
                    Margin="0,30,0,0"
@@ -27,7 +32,7 @@
             <Button Text="DEVINER" Clicked="ButtonClick"
                     HorizontalOptions="Center"
                     WidthRequest="120"
-                    BackgroundColor="Blue"
+                    BackgroundColor="{StaticResource shadowColor}"
                     TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
