@@ -30,7 +30,7 @@ namespace nombremagique.Views
                 DisplayAlert("Oops", "Vous devez entrer un nombre", "ok");
                 return;
             }
-            int nombreUtilisateur = 0;
+            int nombreUtilisateur;
             try
             {
                 nombreUtilisateur = Int32.Parse(numberEntry.Text);
@@ -66,8 +66,7 @@ namespace nombremagique.Views
 
         private async Task WinAction()
         {
-            await DisplayAlert("Gagné", "Vous avez trouvé le nombre magique", "ok");
-            await this.Navigation.PopAsync();
+            await Navigation.PushAsync(new WinPage(nombreMagique));
         }
     }
 }
