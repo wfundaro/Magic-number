@@ -35,7 +35,7 @@ namespace nombremagique.Views
             {
                 nombreUtilisateur = Int32.Parse(numberEntry.Text);
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 DisplayAlert("Oops", "Vous devez entreruniquement des chiffres", "ok");
                 return;

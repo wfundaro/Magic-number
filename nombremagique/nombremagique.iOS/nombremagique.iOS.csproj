@@ -133,4 +133,10 @@
       <Name>nombremagique</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="win.png" />
+  </ItemGroup>
 </Project>
